@@ -1,0 +1,62 @@
+<html>
+    <head>
+       <title>LOGIN PAGE</title>
+
+       <link href="styles1.css" rel="stylesheet">
+       <style>
+        body{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100%;
+         background-image: url(3.jpg);
+         background-repeat: no-repeat;
+         background-position: "center";
+         background-attachment:fixed ;
+         background-size: cover;
+         color: aliceblue;
+   
+        }
+       </style>
+      <script>
+         // User Validations
+ function loginValidation() {
+             // Ramesh
+   var uname = document.myform.username.value;
+              //Ramesh@123
+   var password = document.myform.password.value;
+             if(uname==null || uname=="") {
+               alert("Name cant be blank")
+               return false;  
+            } else if (password.length<6){
+               alert("Password Must be 6 letters")
+               return false;
+            }  
+            return true                 
+         }           
+      </script>
+    </head>
+     <body>
+      <nav>
+         <ul >
+             <li><a href="home.html">Home</a></li>
+             <li><a href="register.html">Register</a></li>
+             <li><a href="login.html">Login</a></li>
+             <li><a href="Portfolio.html">Portfolio</a></li>
+             <li><a href="contactus.html">Contact</a></li>
+         </ul>
+     </nav>
+        <form   name="myform" action="Loginsuccess.html" 	onsubmit="return loginValidation(this)">
+        <div class="container" >
+         <h2>Login Page</h2>  
+         <form name="myform" action="LoginSuccess.html" 	onsubmit="return loginValidation(this)">
+            User Name : <input type="text" name="username"> <br><br>
+            Password :  <input type="password" name="password"> <br><br>
+         <input type="submit" value="Submit">   
+         <p>forgot password? <a href="forgotpass.html">reset</a>  </p>
+          
+        </form>
+        </div>
+        </form> 
+     </body></center>
+ </html>
